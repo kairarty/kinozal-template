@@ -1,0 +1,106 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
+  background-color: $color-primary-dark;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  &:focus,
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  transition: 0.5s;
+
+  @include sm-min {
+    border-radius: 4px;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  &:hover,
+  &:focus {
+    background-color: $color-primary;
+  }
+}
+
+.navbar {
+  padding: 6px;
+}
+
+.nav-link {
+  padding: 13px 12px;
+}
+
+.navbar-right > li {
+  @include sm-min {
+    margin: 5px 5px 5px 0;
+  }
+}
+
+.navbar-left {
+  @include sm {
+    margin-bottom: 0 !important;
+  }
+
+  > li {
+    @include sm-min {
+      margin: 5px 0 5px 5px;
+    }
+  }
+}
+
+.bg-dark {
+  background-color: darken($color-dark, 4%);
+}
+
+.container {
+  justify-content: center;
+}
+
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  justify-content: center;
+}
+
+.navbar-left > li,
+.navbar-right > li {
+  text-align: center;
+}
+
+.nav-item {
+  @include lg {
+    margin-bottom: 0 !important;
+  }
+}
+
+.card {
+  &:not(:last-of-type) {
+    margin-bottom: $gap * 2;
+  }
+}
+
+.card-header {
+  letter-spacing: 0.08em;
+
+  color: $color-white;
+  border: none;
+  background-color: $color-accent;
+
+  font-size: 1.125rem;
+}
+
+.card-body {
+  border: 1px solid $color-gray;
+  border-radius: 0 0 4px 4px;
+  background-color: $color-gray-light;
+}
