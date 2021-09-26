@@ -10,6 +10,7 @@
           rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/img/favicon.png" rel="icon" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
@@ -75,21 +76,96 @@
         <aside class="left-sidebar col-lg-3 order-lg-1 col-md-4 order-md-2">
 
             <div class="card vertical-slider">
-                <div class="card-header alert-info">Panel Heading</div>
-                <div class="card-body">
-                    <p>Panel content</p>
+                <div class="carousel slide" data-bs-ride="carousel" id="vertical-carousel">
+                    <div class="carousel-indicators">
+                        <button aria-current="true" aria-label="Slide 1" class="active"
+                                data-bs-slide-to="0" data-bs-target="#vertical-carousel" type="button"></button>
+                        <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#vertical-carousel"
+                                type="button"></button>
+                        <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#vertical-carousel"
+                                type="button"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img alt="image" class="d-block w-100" src="assets/img/films/1263242.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="image" class="d-block w-100" src="assets/img/films/1289488.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="image" class="d-block w-100" src="assets/img/films/1266931.jpg">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev"
+                            data-bs-target="#vertical-carousel"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next"
+                            data-bs-target="#vertical-carousel"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
+
             <div class="card site-search">
                 <div class="card-header alert-info">Поиск</div>
                 <div class="card-body">
-                    <p>Panel content</p>
+                    <form action="search">
+                        <div class="input-group input-group-lg mb-3">
+                            <input class="form-control" placeholder="Поиск по сайту" type="search">
+                            <button class="btn btn-outline-secondary" type="button"><i class="bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="card user-login">
                 <div class="card-header alert-info">Пользователь</div>
                 <div class="card-body">
-                    <p>Panel content</p>
+                    <ul class="nav nav-tabs user-login__tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="user-login-sidebar" aria-selected="true" class="nav-link active"
+                                    data-bs-target="#user-login-sidebar"
+                                    data-bs-toggle="tab" id="home-tab" role="tab" type="button">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="user-registration-sidebar" aria-selected="false" class="nav-link"
+                                    data-bs-target="#user-registration-sidebar" data-bs-toggle="tab" id="profile-tab"
+                                    role="tab" type="button"><i class="bi bi-person-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content user-login__content" id="myTabContent">
+                        <div aria-labelledby="home-tab" class="tab-pane fade show active" id="user-login-sidebar"
+                             role="tabpanel">
+                            <form action="login">
+                                <div class="form-group ">
+                                    <input class="form-control form-control-lg mb-3" placeholder="Логин" type="text">
+                                    <input class="form-control form-control-lg mb-3" placeholder="Пароль" type="text">
+                                    <button class="btn btn-outline-secondary btn-lg w-100">Вход</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div aria-labelledby="profile-tab" class="tab-pane fade" id="user-registration-sidebar"
+                             role="tabpanel">
+                            <form action="registration">
+                                <div class="form-group ">
+                                    <input class="form-control form-control-lg mb-3" placeholder="Логин" type="text">
+                                    <input class="form-control form-control-lg mb-3" placeholder="Пароль" type="text">
+                                    <input class="form-control form-control-lg mb-3" placeholder="Email" type="text">
+                                    <button class="btn btn-outline-secondary btn-lg w-100">Регистрация</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div class="card site-news">

@@ -104,3 +104,16 @@
   border-radius: 0 0 4px 4px;
   background-color: $color-gray-light;
 }
+
+.vertical-slider {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.input-group-lg > .form-control {
+  font-size: 0.875rem;
+}
+
+.form-control-lg {
+  font-size: 0.875rem !important;
+}
