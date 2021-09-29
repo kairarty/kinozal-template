@@ -1,2 +1,42 @@
 @use "presets" as *;
 @use "mixins" as *;
+
+.footer {
+  background-color: #232323;
+  padding-top: 45px;
+
+  &__list-title {
+    color: rgb(213, 213, 213);
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__list-link {
+    text-decoration: none;
+    color: #6f6f6f;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__list {
+    padding: 0;
+  }
+
+  &__fomenko {
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 0 20px;
+
+    &-link {
+      color: #d5d5d5;
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}

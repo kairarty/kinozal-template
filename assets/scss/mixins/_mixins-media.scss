@@ -30,6 +30,12 @@
   }
 }
 
+@mixin xl {
+  @media (max-width: $xl - 0.2) {
+    @content
+  }
+}
+
 @mixin md-min {
   @media (min-width: $md) {
     @content;

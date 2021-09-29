@@ -22,3 +22,9 @@ a {
     color: $color-accent;
   }
 }
+
+h1 {
+  font-family: $font-header;
+  font-size: 3rem;
+  margin: -$gap-md 0 $gap-md 0;
+}

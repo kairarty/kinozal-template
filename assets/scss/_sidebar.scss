@@ -14,13 +14,28 @@
     margin-right: -5px;
 
     .nav-link {
-      color: $color-white;
+      color: $color-gray;
       padding: 10px 5px 12px;
+      position: relative;
+
+      &:hover {
+        border: none;
+        position: relative;
+        top: 1px;
+        right: 1px;
+      }
 
       &.active {
+        position: relative;
+        top: 1px;
         background-color: transparent;
         border: none;
-        color: $color-gray;
+        color: $color-white;
+
+        &:hover {
+          position: relative;
+          right: 0;
+        }
       }
     }
   }
@@ -80,5 +95,55 @@ $image-size-with-padding: $image-size + $gap;
     font-size: 0.8rem;
     color: $color-gray-dark;
   }
+}
+
+.top-films {
+  &__body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__list {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    background: transparent;
+    margin-left: -1px;
+    margin-right: -1px;
+    color: $color-primary;
+    padding-right: 50px;
+
+    &:first-child {
+      border-top: none;
+      border-radius: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: $color-accent;
+      border-color: $color-accent;
+
+      .badge {
+        background-color: $color-dark !important;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    right: $gap;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.nav-item button {
 
 }
