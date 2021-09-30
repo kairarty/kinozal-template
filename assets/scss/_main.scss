@@ -37,6 +37,12 @@
     padding-left: $gap-sm !important;
     margin-bottom: $gap;
 
+    &:hover {
+      .new-films-item__title {
+        color: white;
+      }
+    }
+
     &__thumbnail {
       margin-bottom: 0;
 
@@ -137,6 +143,7 @@
         color: white;
         background-color: $color-accent;
       }
+
     }
 
     &__title {

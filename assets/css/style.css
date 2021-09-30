@@ -183,6 +183,10 @@ h1 {
     margin-bottom: 15px;
 }
 
+.new-films-item:hover .new-films-item__title {
+    color: white;
+}
+
 .new-films-item__thumbnail {
     margin-bottom: 0;
 }
